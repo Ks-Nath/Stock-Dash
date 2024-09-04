@@ -12,6 +12,7 @@ def load_lottieurl(url):
 
 lottie_coding = load_lottieurl("https://lottie.host/12726fe4-4d4c-4d0d-a04c-20592832a4d0/ZrkBdSphZh.json")
 
+st_lottie(lottie_coding, height=300, key = "coding")
 
 # Page title
 st.title('📊 Stock Dashboard')
