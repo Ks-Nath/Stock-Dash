@@ -1,4 +1,4 @@
-import streamlit as st, pandas as pf, yfinance as yf, numpy as np
+import streamlit as st, pandas as pf, yfinance as yf
 import plotly.express as px 
 
 # Page title
