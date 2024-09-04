@@ -47,3 +47,11 @@ with contact:
     st_lottie(lottie_coding, height=300, key = "coding2")
     st.write("Check out my website [:globe_with_meridians:](https://ksnath.com)")
     st.write("Connect On Instagram [:camera:](https://www.instagram.com/k.s.srinath_1?igsh=MWJ4NWV5NGtnYTE5dg==)")
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
