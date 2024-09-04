@@ -22,12 +22,12 @@ end_date = st.sidebar.date_input('End Date')
 dashboard, about, contact = st.tabs(["Dashboard","About","Contact"])
 with dashboard:
     try: 
-    data = yf.download(ticker, start=start_date, end=end_date)
-    fig = px.line(data, x = data.index, y = data['Adj Close'], title=ticker)
-    st.plotly_chart(fig)
+        data = yf.download(ticker, start=start_date, end=end_date)
+        fig = px.line(data, x = data.index, y = data['Adj Close'], title=ticker)
+        st.plotly_chart(fig)
 
     except ValueError:
-    st.text("""Author : K.$.Nath""")
+        st.text("""Author : K.$.Nath""")
 
     result = st.button("Show data")
     if result:
