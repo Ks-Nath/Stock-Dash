@@ -2,7 +2,7 @@ import json
 import requests
 import streamlit as st, pandas as pf, yfinance as yf
 import plotly.express as px 
-from streamlit_lottie import st_lottie
+from streamlit_lottie import st_lottie 
 
 def load_lottieurl(url):
     r = requests.get(url)
