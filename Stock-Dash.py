@@ -18,19 +18,20 @@ st.title('📊 Stock Dashboard')
 ticker = st.sidebar.text_input('Ticker')
 start_date = st.sidebar.date_input('Start Date')
 end_date = st.sidebar.date_input('End Date')
-try: 
+
+dashboard, about, contact = st.tabs(["Dashboard","About","Contact"])
+with dashboard:
+    try: 
     data = yf.download(ticker, start=start_date, end=end_date)
     fig = px.line(data, x = data.index, y = data['Adj Close'], title=ticker)
     st.plotly_chart(fig)
 
-except ValueError:
+    except ValueError:
     st.text("""Author : K.$.Nath""")
 
-result = st.button("Show data")
-if result:
-    st.write(data)
-
-about, contact = st.tabs(["About","Contact"])
+    result = st.button("Show data")
+    if result:
+        st.write(data)
 
 with about:
     st_lottie(lottie_coding, height=300, key = "coding")
