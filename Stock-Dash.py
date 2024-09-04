@@ -44,5 +44,5 @@ with contact:
             return None
         return r.json()
     lottie_coding = load_lottieurl("https://lottie.host/5159656e-c6f2-4e7b-854b-8acf2b6cd2bc/Pg1KzvfFYA.json")
-    st_lottie(lottie_coding, height=300, key = "coding")
+    st_lottie(lottie_coding, height=300, key = "coding2")
     st.link_button("Connect On Insta", "https://www.instagram.com/k.s.srinath_1?igsh=MWJ4NWV5NGtnYTE5dg==")
