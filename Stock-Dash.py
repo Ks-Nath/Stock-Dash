@@ -10,7 +10,7 @@ def load_lottieurl(url):
         return None
     return r.json()
 
-lottie_coding = load_lottieurl("https://lottie.host/db79e7cb-5d16-4835-98c3-f4d7c97656f3/mplX6B6uxK.json")
+lottie_coding = load_lottieurl("https://lottie.host/12726fe4-4d4c-4d0d-a04c-20592832a4d0/ZrkBdSphZh.json")
 
 
 # Page title
@@ -30,4 +30,3 @@ result = st.button("Show data")
 if result:
     st.write(data)
 
-st_lottie(lottie_coding, height=300, key = "coding")
