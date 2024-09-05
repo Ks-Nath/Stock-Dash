@@ -37,9 +37,9 @@ with dashboard:
         st.write(data)
         
 with fund_data:
-    try:
         key = 'OHXKCV6NCURGOKQD'
-        fd = FundamentalData(key,output_format = 'pandas')
+        fd = FundamentalData(key,output_format = 'pandas') 
+ 
         st.subheader('Balance Sheet')
         balance_sheet = fd.get_balance_sheet_annual(ticker)[0]
         bs = balance_sheet.T[2:]
@@ -57,9 +57,6 @@ with fund_data:
         is1 = income_statement.T[2:]
         is1.columns = list(income_statement.T.iloc[0])
         st.write(is1)
-      
-    except:
-        st.text("Get Fundamental Data")
 
 with about:
     #Some text
