@@ -52,6 +52,14 @@ with fund_data:
         st.text("Get Fundamental Data")
 
 with about:
+    #Some text
+    st.subheader("Just a clean and minimalistic stock tracking website.", divider="gray")
+    st.markdown("***Simplicity*** is the ultimate *sophistication*.", divider="gray")
+
+    #some more text
+    st.subheader(":heavy_exclamation_mark: How to use :heavy_exclamation_mark:")
+    st.write("On the sidebar, select the date interval and enter the ticker for the stock that you want to monitor. ")
+    
     #Adding animation 
     def load_lottieurl(url):
         r = requests.get(url)
