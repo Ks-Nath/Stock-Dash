@@ -3,7 +3,7 @@ import requests
 import streamlit as st, pandas as pf, yfinance as yf
 import plotly.express as px 
 from streamlit_lottie import st_lottie 
-
+from alpha_vantage.fundamentaldata import FundamentalData
 
 # Page title
 st.title('📊 Stock Dashboard')
@@ -12,7 +12,7 @@ ticker = st.sidebar.text_input('Ticker')
 start_date = st.sidebar.date_input('Start Date')
 end_date = st.sidebar.date_input('End Date')
 
-dashboard, about, contact = st.tabs(["Dashboard","About","Contact"])  #Adding tabs 
+dashboard, fund_data, about, contact = st.tabs(["Dashboard","Fundamental Data","About","Contact"])  #Adding tabs 
 with dashboard:
     try: 
         data = yf.download(ticker, start=start_date, end=end_date)
@@ -25,6 +25,15 @@ with dashboard:
     result = st.button("Show data")
     if result:
         st.write(data)
+        
+with fund_data:
+    key = 'OHXKCV6NCURGOKQD'
+    fd = FundamentalData(key,output_format = 'pandas')
+    st.subheader('Balance Sheet')
+    balance_sheet = fd.get_balance_sheet_annual(ticker)[0]
+    bs = balance_sheet.T[2:]
+    bs.columns = list(balance_sheet.T.iloc[0])
+    st.write(bs)
 
 with about:
     #Adding animation 
