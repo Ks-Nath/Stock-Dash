@@ -22,7 +22,7 @@ ticker = st.sidebar.text_input('Ticker')
 start_date = st.sidebar.date_input('Start Date')
 end_date = st.sidebar.date_input('End Date')
 
-dashboard, about, contact = st.tabs(["Dashboard","About","Contact"])  #Adding tabs 
+dashboard, fund_data, about, contact = st.tabs(["Dashboard","Fundamental Data","About","Contact"])  #Adding tabs 
 with dashboard:
     try: 
         data = yf.download(ticker, start=start_date, end=end_date)
