@@ -22,7 +22,7 @@ ticker = st.sidebar.text_input('Ticker')
 start_date = st.sidebar.date_input('Start Date')
 end_date = st.sidebar.date_input('End Date')
 
-dashboard, fund_data, about, contact = st.tabs(["Dashboard","Fundamental Data","About","Contact"])  #Adding tabs 
+dashboard, about, contact = st.tabs(["Dashboard","About","Contact"])  #Adding tabs 
 with dashboard:
     try: 
         data = yf.download(ticker, start=start_date, end=end_date)
@@ -35,7 +35,7 @@ with dashboard:
     result = st.button("Show data")
     if result:
         st.write(data)
-     
+"""     
 with fund_data:
         key = 'U8931XI2ODS6XEB5'
         fd = FundamentalData(key,output_format = 'pandas') 
@@ -56,7 +56,7 @@ with fund_data:
         income_statement = fd.get_income_statement_annual(ticker)[0]
         is1 = income_statement.T[2:]
         is1.columns = list(income_statement.T.iloc[0])
-        st.write(is1) 
+        st.write(is1) """
 
 with about:
     #Some text
