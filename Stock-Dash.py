@@ -35,6 +35,19 @@ with fund_data:
         bs = balance_sheet.T[2:]
         bs.columns = list(balance_sheet.T.iloc[0])
         st.write(bs)
+
+        st.subheader('Income Statement')
+        income_statement = fd.get_income_statement_annual(ticker)[0]
+        is1 = income_statement.T[2:]
+        is1.columns = list(income_statement.T.iloc[0])
+        st.write(is1)
+        
+        st.subheader('Cash Flow Statement')
+        cash_flow = fd.get_cash_flow_annual(ticker)[0]
+        cf = cashflow.T[2:]
+        cf.columns = list(cash_flow.T.iloc[0])
+        st.write(is1)
+      
     except:
         st.text("Get Fundamental Data")
 
