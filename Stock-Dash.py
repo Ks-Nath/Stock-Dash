@@ -7,6 +7,16 @@ from alpha_vantage.fundamentaldata import FundamentalData
 
 # Page title
 st.title('📊 Stock Dashboard')
+
+#Hide footer and the hamburger
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 #Sidebar
 ticker = st.sidebar.text_input('Ticker')
 start_date = st.sidebar.date_input('Start Date')
@@ -81,10 +91,3 @@ with contact:
     st.write("Check out my website [:globe_with_meridians:](https://ksnath.com)")
     st.write("Connect On Instagram [:camera:](https://www.instagram.com/k.s.srinath_1?igsh=MWJ4NWV5NGtnYTE5dg==)")
 
-hide_streamlit_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
