@@ -63,8 +63,9 @@ with fund_data:
 
 with about:
     #Some text
-    st.subheader("Just a clean and minimalistic stock tracking website.", divider="gray")
-    st.markdown("***Simplicity*** is the ultimate *sophistication*.", divider="gray")
+    st.subheader("Just a clean and minimalistic stock tracking website.")
+    st.markdown("***Simplicity*** is the ultimate *sophistication*.")
+    st.subheader(" ")
 
     #some more text
     st.subheader(":heavy_exclamation_mark: How to use :heavy_exclamation_mark:")
