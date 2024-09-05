@@ -35,9 +35,9 @@ with dashboard:
     result = st.button("Show data")
     if result:
         st.write(data)
-        
+     
 with fund_data:
-        key = 'OHXKCV6NCURGOKQD'
+        key = 'U8931XI2ODS6XEB5'
         fd = FundamentalData(key,output_format = 'pandas') 
  
         st.subheader('Balance Sheet')
@@ -56,7 +56,7 @@ with fund_data:
         income_statement = fd.get_income_statement_annual(ticker)[0]
         is1 = income_statement.T[2:]
         is1.columns = list(income_statement.T.iloc[0])
-        st.write(is1)
+        st.write(is1) 
 
 with about:
     #Some text
