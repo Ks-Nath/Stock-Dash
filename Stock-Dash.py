@@ -27,13 +27,16 @@ with dashboard:
         st.write(data)
         
 with fund_data:
-    key = 'OHXKCV6NCURGOKQD'
-    fd = FundamentalData(key,output_format = 'pandas')
-    st.subheader('Balance Sheet')
-    balance_sheet = fd.get_balance_sheet_annual(ticker)[0]
-    bs = balance_sheet.T[2:]
-    bs.columns = list(balance_sheet.T.iloc[0])
-    st.write(bs)
+    try:
+        key = 'OHXKCV6NCURGOKQD'
+        fd = FundamentalData(key,output_format = 'pandas')
+        st.subheader('Balance Sheet')
+        balance_sheet = fd.get_balance_sheet_annual(ticker)[0]
+        bs = balance_sheet.T[2:]
+        bs.columns = list(balance_sheet.T.iloc[0])
+        st.write(bs)
+    except:
+        st.text("Get Fundamental Data")
 
 with about:
     #Adding animation 
