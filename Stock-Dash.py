@@ -67,6 +67,7 @@ with about:
     #some more text
     st.subheader(":heavy_exclamation_mark: How to use :heavy_exclamation_mark:")
     st.write("On the sidebar, select the date interval and enter the ticker for the stock that you want to monitor. ")
+    st.write("To find tickers visit yahoo finance. Eg: INFY, SBIN.NS ")
     
     #Adding animation 
     def load_lottieurl(url):
