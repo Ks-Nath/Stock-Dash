@@ -7,7 +7,7 @@ from alpha_vantage.fundamentaldata import FundamentalData
  
 # Page title
 st.title('📊 Stock Dashboard')
-
+ 
 #Hide footer and the hamburger
 hide_streamlit_style = """
             <style>
