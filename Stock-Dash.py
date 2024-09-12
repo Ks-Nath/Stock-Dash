@@ -36,8 +36,8 @@ with dashboard:
     if result:
         st.write(data)
 
+comment = """
 with fund_data:
-      try:
            key = 'U8931XI2ODS6XEB5'
            fd = FundamentalData(key,output_format = 'pandas') 
  
@@ -60,7 +60,7 @@ with fund_data:
            st.write(is1)
            
       except:
-            st.text("Fundamental data")
+            st.text("Fundamental data")"""
 
 with about:
     #Some text
