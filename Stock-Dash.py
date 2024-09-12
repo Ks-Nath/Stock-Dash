@@ -5,7 +5,7 @@ import plotly.express as px
 from streamlit_lottie import st_lottie 
 from alpha_vantage.fundamentaldata import FundamentalData
    
-# Page title
+# Page title 
 st.title('📊 Stock Dashboard')
  
 #Hide footer and the hamburger
