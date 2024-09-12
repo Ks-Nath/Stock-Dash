@@ -37,7 +37,7 @@ with dashboard:
         st.write(data)
 
 with fund_data:
-        try:
+      try:
            key = 'U8931XI2ODS6XEB5'
            fd = FundamentalData(key,output_format = 'pandas') 
  
@@ -58,8 +58,9 @@ with fund_data:
            is1 = income_statement.T[2:]
            is1.columns = list(income_statement.T.iloc[0])
            st.write(is1)
+           
       except:
-            st.write("Fundamental data")
+            st.text("Fundamental data")
 
 with about:
     #Some text
